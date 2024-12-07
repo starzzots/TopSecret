@@ -1,1 +1,3 @@
-print("hello")
+from config import *
+
+print(test)
