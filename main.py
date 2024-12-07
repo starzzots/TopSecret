@@ -1,4 +1,5 @@
 from config import *
+import time
 import base64
 import datetime
 import json
@@ -125,19 +126,31 @@ class CryptoAPITrading:
 
 def main():
     api_trading_client = CryptoAPITrading()
-    print(api_trading_client.get_account())
+    CRYPTO_LIST = ["BTC-USD", "DOGE-USD", "ETH-USD", "XRP-USD", "SOL-USD", "ADA-USD", "AVAX-USD", "SHIB-USD", "LINK-USD",
+              "XLM-USD", "UNI-USD", "LTC-USD", "PEPE-USD", "ETC-USD", "AAVE-USD", "WIF-USD", "XTZ-USD", "COMP-USD",]
+    #print(api_trading_client.get_account())
+    coin = api_trading_client.get_estimated_price("DOGE-USD",side="bid",quantity="1")
+    print(f"symbol: {coin['results'][0]['symbol']}")
+    print(f"price: {coin['results'][0]['price']}") #its a list 'results' then another list with the a dict so need to index the list then can access the dict values
+    print(f"timestamp: {coin['results'][0]['timestamp']}\n")
+            
+    #print(BTC)
+    #print(f"price: {coin['results'][0]['price']}") #its a list 'results' then another list with the a dict so need to index the list then can access the dict values
+    #print(f"timestamp: {coin['results'][0]['timestamp']}\n")
 
-    """
-    BUILD YOUR TRADING STRATEGY HERE
+    
+"""
+#BUILD YOUR TRADING STRATEGY HERE
 
     order = api_trading_client.place_order(
           str(uuid.uuid4()),
           "buy",
           "market",
-          "BTC-USD",
-          {"asset_quantity": "0.0001"}
+          "DOGE-USD",
+          {"asset_quantity": "1.0"}
     )
-    """
+    order
+"""
 
 
 if __name__ == "__main__":
