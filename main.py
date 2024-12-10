@@ -122,7 +122,7 @@ class CryptoAPITrading:
     def get_orders(self) -> Any:
         path = "/api/v1/crypto/trading/orders/"
         return self.make_api_request("GET", path)
-
+    
 
 def main():
     api_trading_client = CryptoAPITrading()
@@ -133,8 +133,8 @@ def main():
     print(f"symbol: {coin['results'][0]['symbol']}")
     print(f"price: {coin['results'][0]['price']}") #its a list 'results' then another list with the a dict so need to index the list then can access the dict values
     print(f"timestamp: {coin['results'][0]['timestamp']}\n")
-            
-    #print(BTC)
+    print(api_trading_client.get_trading_pairs('XRP-USD'))        
+    #print(coin['results'][0])
     #print(f"price: {coin['results'][0]['price']}") #its a list 'results' then another list with the a dict so need to index the list then can access the dict values
     #print(f"timestamp: {coin['results'][0]['timestamp']}\n")
 
