@@ -36,8 +36,10 @@ def store_data(symbol="DOGE-USD", csvname='test.csv'):
 
 
 if __name__ == "__main__":
-    symbol=input("Enter Symbol: ")
-    csvname=input("Enter file name with .csv: ")
+
     while True:
-        store_data(symbol=symbol, csvname=f"data/{csvname}")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f"data/BTC2")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f"data/DODE2")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f"data/ETH2")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f"data/LTC2")  # Append new data
         time.sleep(60)  # Wait for 1 minute before the next update
