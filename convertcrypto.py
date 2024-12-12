@@ -38,11 +38,15 @@ def store_data(symbol="DOGE-USD", csvname='test.csv'):
 if __name__ == "__main__":
 
     while True:
-        store_data(symbol="BTC-USD", csvname=f".venv/data/BTC4.csv")  # Append new data
-        time.sleep(.05)
-        store_data(symbol="DOGE-USD", csvname=f".venv/data/DOGE4.csv")  # Append new data
-        time.sleep(.05)
-        store_data(symbol="ETH-USD", csvname=f".venv/data/ETH4.csv")  # Append new data
-        time.sleep(.05)
-        store_data(symbol="LTC-USD", csvname=f".venv/data/LTC4.csv")  # Append new data
-        time.sleep(60)  # Wait for 1 minute before the next update
+        try:
+            store_data(symbol="BTC-USD", csvname=f".venv/data/BTC.csv")  # Append new data
+            time.sleep(.05)
+            store_data(symbol="DOGE-USD", csvname=f".venv/data/DOGE.csv")  # Append new data
+            time.sleep(.05)
+            store_data(symbol="ETH-USD", csvname=f".venv/data/ETH.csv")  # Append new data
+            time.sleep(.05)
+            store_data(symbol="LTC-USD", csvname=f".venv/data/LTC.csv")  # Append new data
+            time.sleep(60)  # Wait for 1 minute before the next update
+        except:
+            print("oops api calls must be lagging.... sleeping 10secs then trying again")
+            time.sleep(10)
