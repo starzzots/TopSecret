@@ -1,6 +1,5 @@
 from config import *
 import robin_stocks.robinhood as r
-import matplotlib.pyplot as plt
 import datetime
 import os
 import time as t
