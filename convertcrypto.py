@@ -1,4 +1,4 @@
-from main import *
+from crypto import *
 import time
 import csv
 
@@ -38,8 +38,11 @@ def store_data(symbol="DOGE-USD", csvname='test.csv'):
 if __name__ == "__main__":
 
     while True:
-        store_data(symbol="BTC-USD", csvname=f"data/BTC2")  # Append new data
-        store_data(symbol="BTC-USD", csvname=f"data/DODE2")  # Append new data
-        store_data(symbol="BTC-USD", csvname=f"data/ETH2")  # Append new data
-        store_data(symbol="BTC-USD", csvname=f"data/LTC2")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f"data/BTC3.csv")  # Append new data
+        time.sleep(.05)
+        store_data(symbol="DOGE-USD", csvname=f"data/DOGE3.csv")  # Append new data
+        time.sleep(.05)
+        store_data(symbol="ETH-USD", csvname=f"data/ETH3.csv")  # Append new data
+        time.sleep(.05)
+        store_data(symbol="LTC-USD", csvname=f"data/LTC3.csv")  # Append new data
         time.sleep(60)  # Wait for 1 minute before the next update
