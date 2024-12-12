@@ -20,7 +20,7 @@ optionType = "call" #or "put"
 minutesToTrack = 1 
 PrintInterval = 10 
 endTime = t.time() + 60 * minutesToTrack
-fileName = "options/spy/spy.csv"
+fileName = ".venv/options/spy/spy.csv"
 writeType = "w" 
 
 # Create directory if it doesn't exist

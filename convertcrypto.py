@@ -38,11 +38,11 @@ def store_data(symbol="DOGE-USD", csvname='test.csv'):
 if __name__ == "__main__":
 
     while True:
-        store_data(symbol="BTC-USD", csvname=f"data/BTC3.csv")  # Append new data
+        store_data(symbol="BTC-USD", csvname=f".venv/data/BTC4.csv")  # Append new data
         time.sleep(.05)
-        store_data(symbol="DOGE-USD", csvname=f"data/DOGE3.csv")  # Append new data
+        store_data(symbol="DOGE-USD", csvname=f".venv/data/DOGE4.csv")  # Append new data
         time.sleep(.05)
-        store_data(symbol="ETH-USD", csvname=f"data/ETH3.csv")  # Append new data
+        store_data(symbol="ETH-USD", csvname=f".venv/data/ETH4.csv")  # Append new data
         time.sleep(.05)
-        store_data(symbol="LTC-USD", csvname=f"data/LTC3.csv")  # Append new data
+        store_data(symbol="LTC-USD", csvname=f".venv/data/LTC4.csv")  # Append new data
         time.sleep(60)  # Wait for 1 minute before the next update

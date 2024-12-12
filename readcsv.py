@@ -23,7 +23,7 @@ def read_csv_to_dict(filename, key_index=0):
   return data_dict
 
 # Example usage:
-csv_file = 'options/spy/spy.csv'  # Replace with the actual filename
+csv_file = '.venv/options/spy/spy.csv'  # Replace with the actual filename
 data_dict = read_csv_to_dict(csv_file) 
 
 print(data_dict)
